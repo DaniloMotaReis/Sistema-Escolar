@@ -1,0 +1,24 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h3> Editar Turma: </h3>
+            <div class="card">
+                <div class="card-body">
+                    <form action=" /rota_aluno/aluno/editar_aluno" method="POST">
+                        {{#each alunos}}
+                            <label for="id_aluno">ID:</label>
+                            <input type="text" name="id_aluno" readonly="true" class="form-control" value="{{id_aluno}}"><br>
+                            <label for="matricula">Matricula: </label>
+                            <input type="text" id="matricula" name="matricula" class="form-control" value="{{matricula}}"><br>
+                            <label for="nome">Nome: </label>
+                            <input type="text" id="nome" name="nome" class="form-control" value="{{nome}}"><br>
+                            <label for="fk_turma">Turma: </label>
+                            <input type="text" id="fk_turma" name="fk_turma" class="form-control" value="{{fk_turma}}"><br>
+                            <button type="submit" class="btn btn-success">Editar Aluno</button>
+                        {{/each}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
